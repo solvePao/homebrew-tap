@@ -1,8 +1,8 @@
 cask "mac-noodle" do
-  version "1.0.5,46"
-  sha256 "7d7b17c3c0936545de6f295264f18250be09239fea6a25a02719d71c9f5ba6ec"
+  version "1.0.5,60"
+  sha256 "fe7b8c1365f8cc7d03ec344a4a835858823651c5d24172d6b71915b1dbfc2229"
 
-  url "https://github.com/solvePao/Mac-Noodle-Web/releases/download/v1.0.5-xcode-cloud.46/Mac-Noodle.dmg"
+  url "https://github.com/solvePao/Mac-Noodle-Web/releases/download/v1.0.5-xcode-cloud.60/Mac-Noodle.dmg"
   name "Mac Noodle"
   desc "A beautiful macOS menu bar app for visualizing disk usage"
   homepage "https://macnoodle.com"
