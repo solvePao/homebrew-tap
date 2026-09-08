@@ -14,7 +14,7 @@ cask "mac-noodle" do
   postflight do
     marker = "#{Dir.home}/Library/Containers/com.solvepao.mac.noodle/Data/Library/Application Support/Mac Noodle/distribution-channel"
     FileUtils.mkdir_p(File.dirname(marker))
-    File.write(marker, "homebrew-v1\\n")
+    File.write(marker, "homebrew-v1\n")
   end
 
   zap trash: [
