@@ -1,24 +1,19 @@
 cask "mac-noodle" do
-  version "1.0.5,65"
-  sha256 "d0da47faab0cf75350d75e4fb06b101b03f2e7c7e854d1d63d9ffc42885545f9"
-
-  url "https://github.com/solvePao/Mac-Noodle-Web/releases/download/v1.0.5-xcode-cloud.65/Mac-Noodle.dmg"
+  version "1.0.5,81"
+  sha256 "d2a3210ffe5bf847395d63afd8fd6c8c98c5432fe9803d4391827847b94223f6"
+  url "https://github.com/solvePao/Mac-Noodle-Web/releases/download/v1.0.5-xcode-cloud.81/Mac-Noodle.dmg"
   name "Mac Noodle"
-  desc "A beautiful macOS menu bar app for visualizing disk usage"
+  desc "Free space safely with guided cleanup tools"
   homepage "https://macnoodle.com"
-
-  depends_on macos: ">= :ventura"
-
+  depends_on macos: ">= :sonoma"
+  conflicts_with cask: "mac-noodle-beta"
   app "Mac Noodle.app"
-
   postflight do
     marker = "#{Dir.home}/Library/Containers/com.solvepao.mac.noodle/Data/Library/Application Support/Mac Noodle/distribution-channel"
     FileUtils.mkdir_p(File.dirname(marker))
-    File.write(marker, "homebrew-v1\n")
+    require "json"
+    identity = File.stat("#{appdir}/Mac Noodle.app")
+    File.write(marker, JSON.generate({version: 2, cask: "mac-noodle", device: identity.dev, inode: identity.ino}))
   end
-
-  zap trash: [
-    "~/Library/Application Support/Mac Noodle",
-    "~/Library/Containers/com.solvepao.mac.noodle",
-  ]
+  zap trash: ["~/Library/Containers/com.solvepao.mac.noodle"]
 end
