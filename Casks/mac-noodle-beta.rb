@@ -1,7 +1,7 @@
 cask "mac-noodle-beta" do
-  version "1.0.5,79"
-  sha256 "8e2df4505a090bc497b89775424ff281ac14c286e35afdf65e7eec50ecdb8f31"
-  url "https://github.com/solvePao/Mac-Noodle-Web/releases/download/v1.0.5-beta-xcode-cloud.79/Mac-Noodle.dmg"
+  version "1.0.5,83"
+  sha256 "79fd0ff9b577eb29449ce586b925ab869b9d5f243c8ef2e742214fd930e1c120"
+  url "https://github.com/solvePao/Mac-Noodle-Web/releases/download/v1.0.5-beta-xcode-cloud.83/Mac-Noodle.dmg"
   name "Mac Noodle"
   desc "Free space safely with guided cleanup tools"
   homepage "https://macnoodle.com"
